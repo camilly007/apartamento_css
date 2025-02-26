@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORADORES</title>
+    <link rel="stylesheet" href="moradores.css">
+</head>
+<body>
+    <form action="insertmoradores.php" method="POST">
+        <h1>CADASTRAR MORADOR</h1>
+        <hr>
+        <input type="text" name="nome" placeholder="nome" value="<?php if($nome) echo $nome; ?>"/>
+
+        <input type="number" name="idade" placeholder="idade"  value="<?php if($idade) echo $idade; ?>" />   
+        
+        <input type="number" name="numero_apartamento" placeholder="numero apt"  value="<?php if($numero_apartamento) echo $numero_apartamento; ?>" />
+
+      
+        <input type="hidden" name="act" value="save">
+        <input type="submit" value="salvar">
+        <input type="reset" value="novo">
+    </form>
+    
+    <table border="1" width="100%">
+        <tr>
+            <th>NOME</th>
+            <th>IDADE</th>
+            <th>numero_apartamento</th>
+        </tr>
+    </table>
+</body>
+</html>
